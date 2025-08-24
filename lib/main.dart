@@ -305,6 +305,34 @@ class MyApp extends StatelessWidget {
                 subtitle: Text("Creative Writer ✍️"),
               ),
             ),
+             Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              elevation: 4,
+              child: const ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.green,
+                  child: Icon(Icons.person, color: Colors.white),
+                ),
+                title: Text("Peculiar"),
+                subtitle: Text("Creative Writer ✍️"),
+              ),
+            ),
+             Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              elevation: 4,
+              child: const ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.green,
+                  child: Icon(Icons.person, color: Colors.white),
+                ),
+                title: Text("Peculiar"),
+                subtitle: Text("Creative Writer ✍️"),
+              ),
+            ),
             // Add more cards here...
           ],
         ),
