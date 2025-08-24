@@ -160,104 +160,104 @@
 // }
 
 //modification
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Profile Cards App",
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Pearl's Profile Cards"),
-          centerTitle: true,
-          backgroundColor: Colors.green.shade400,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: GridView.count(
-            crossAxisCount: 2, 
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            children: const [
-              ProfileCard(
-                icon: Icons.book,
-                title: "Course",
-                description: "App Developement",
-              ),
-              ProfileCard(
-                icon: Icons.flag,
-                title: "Goal",
-                description: "Software Engineer",
-              ),
-              ProfileCard(
-                icon: Icons.code,
-                title: "Skills",
-                description: "React, Flutter, JS",
-              ),
-              ProfileCard(
-                icon: Icons.lightbulb,
-                title: "Fun Fact",
-                description: "Loves Philosophy",
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: "Profile Cards App",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Pearl's Profile Cards"),
+//           centerTitle: true,
+//           backgroundColor: Colors.green.shade400,
+//         ),
+//         body: Padding(
+//           padding: const EdgeInsets.all(16.0),
+//           child: GridView.count(
+//             crossAxisCount: 2, 
+//             crossAxisSpacing: 16,
+//             mainAxisSpacing: 16,
+//             children: const [
+//               ProfileCard(
+//                 icon: Icons.book,
+//                 title: "Course",
+//                 description: "App Developement",
+//               ),
+//               ProfileCard(
+//                 icon: Icons.flag,
+//                 title: "Goal",
+//                 description: "Software Engineer",
+//               ),
+//               ProfileCard(
+//                 icon: Icons.code,
+//                 title: "Skills",
+//                 description: "React, Flutter, JS",
+//               ),
+//               ProfileCard(
+//                 icon: Icons.lightbulb,
+//                 title: "Fun Fact",
+//                 description: "Loves Philosophy",
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
-class ProfileCard extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final String description;
+// class ProfileCard extends StatelessWidget {
+//   final IconData icon;
+//   final String title;
+//   final String description;
 
-  const ProfileCard({
-    super.key,
-    required this.icon,
-    required this.title,
-    required this.description,
-  });
+//   const ProfileCard({
+//     super.key,
+//     required this.icon,
+//     required this.title,
+//     required this.description,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: Colors.green.shade100, // Brighter olive
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      elevation: 6,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 40, color: Colors.green.shade800),
-            const SizedBox(height: 15),
-            Text(
-              title,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              description,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 14),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Card(
+//       color: Colors.green.shade100, // Brighter olive
+//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+//       elevation: 6,
+//       child: Padding(
+//         padding: const EdgeInsets.all(16),
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Icon(icon, size: 40, color: Colors.green.shade800),
+//             const SizedBox(height: 15),
+//             Text(
+//               title,
+//               style: const TextStyle(
+//                 fontWeight: FontWeight.bold,
+//                 fontSize: 20,
+//               ),
+//             ),
+//             const SizedBox(height: 10),
+//             Text(
+//               description,
+//               textAlign: TextAlign.center,
+//               style: const TextStyle(fontSize: 14),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 
 
