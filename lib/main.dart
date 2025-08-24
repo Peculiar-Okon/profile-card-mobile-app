@@ -333,7 +333,6 @@ class MyApp extends StatelessWidget {
                 subtitle: Text("Creative Writer ✍️"),
               ),
             ),
-            // Add more cards here...
           ],
         ),
     )
