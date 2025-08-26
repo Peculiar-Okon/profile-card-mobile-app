@@ -344,186 +344,186 @@
 //   }
 // }
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-            title: "Profile Cards App",
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Pearl's Profile Cards"),
-          centerTitle: true,
-          backgroundColor: Colors.green.shade400,
-    ),
-     body: ListView(
-          padding: const EdgeInsets.all(12),
-          children: [
-Card(
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(15),
-  ),
-  elevation: 4,
-  color: Colors.green.shade50, // light olive background inside card
-  child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: Colors.green.shade700, // olive/darker green
-          child: const Icon(Icons.person, color: Colors.white, size: 30),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          "Pearl",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.green.shade800, // deep olive for title
-          ),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          "Future Robotics Engineer 🤖",
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.green.shade600, // softer olive for subtitle
-          ),
-        ),
-      ],
-    ),
-  ),
-),
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//             title: "Profile Cards App",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Pearl's Profile Cards"),
+//           centerTitle: true,
+//           backgroundColor: Colors.green.shade400,
+//     ),
+//      body: ListView(
+//           padding: const EdgeInsets.all(12),
+//           children: [
+// Card(
+//   shape: RoundedRectangleBorder(
+//     borderRadius: BorderRadius.circular(15),
+//   ),
+//   elevation: 4,
+//   color: Colors.green.shade50, // light olive background inside card
+//   child: Padding(
+//     padding: const EdgeInsets.all(16.0),
+//     child: Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         CircleAvatar(
+//           radius: 30,
+//           backgroundColor: Colors.green.shade700, // olive/darker green
+//           child: const Icon(Icons.person, color: Colors.white, size: 30),
+//         ),
+//         const SizedBox(height: 10),
+//         Text(
+//           "Pearl",
+//           style: TextStyle(
+//             fontSize: 18,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.green.shade800, // deep olive for title
+//           ),
+//         ),
+//         const SizedBox(height: 5),
+//         Text(
+//           "Future Robotics Engineer 🤖",
+//           style: TextStyle(
+//             fontSize: 14,
+//             color: Colors.green.shade600, // softer olive for subtitle
+//           ),
+//         ),
+//       ],
+//     ),
+//   ),
+// ),
 
-Card(
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(15),
-  ),
-  elevation: 4,
-  color: Colors.green.shade50, // light olive background inside card
-  child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: Colors.green.shade700, // olive/darker green
-          child: const Icon(Icons.person, color: Colors.white, size: 30),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          "Pearl",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.green.shade800, // deep olive for title
-          ),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          "Future Robotics Engineer 🤖",
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.green.shade600, // softer olive for subtitle
-          ),
-        ),
-      ],
-    ),
-  ),
-),
+// Card(
+//   shape: RoundedRectangleBorder(
+//     borderRadius: BorderRadius.circular(15),
+//   ),
+//   elevation: 4,
+//   color: Colors.green.shade50, // light olive background inside card
+//   child: Padding(
+//     padding: const EdgeInsets.all(16.0),
+//     child: Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         CircleAvatar(
+//           radius: 30,
+//           backgroundColor: Colors.green.shade700, // olive/darker green
+//           child: const Icon(Icons.person, color: Colors.white, size: 30),
+//         ),
+//         const SizedBox(height: 10),
+//         Text(
+//           "Pearl",
+//           style: TextStyle(
+//             fontSize: 18,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.green.shade800, // deep olive for title
+//           ),
+//         ),
+//         const SizedBox(height: 5),
+//         Text(
+//           "Future Robotics Engineer 🤖",
+//           style: TextStyle(
+//             fontSize: 14,
+//             color: Colors.green.shade600, // softer olive for subtitle
+//           ),
+//         ),
+//       ],
+//     ),
+//   ),
+// ),
 
-Card(
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(15),
-  ),
-  elevation: 4,
-  color: Colors.green.shade50, // light olive background inside card
-  child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: Colors.green.shade700, // olive/darker green
-          child: const Icon(Icons.person, color: Colors.white, size: 30),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          "Pearl",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.green.shade800, // deep olive for title
-          ),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          "software engineer",
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.green.shade600, // softer olive for subtitle
-          ),
-        ),
-      ],
-    ),
-  ),
-),
+// Card(
+//   shape: RoundedRectangleBorder(
+//     borderRadius: BorderRadius.circular(15),
+//   ),
+//   elevation: 4,
+//   color: Colors.green.shade50, // light olive background inside card
+//   child: Padding(
+//     padding: const EdgeInsets.all(16.0),
+//     child: Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         CircleAvatar(
+//           radius: 30,
+//           backgroundColor: Colors.green.shade700, // olive/darker green
+//           child: const Icon(Icons.person, color: Colors.white, size: 30),
+//         ),
+//         const SizedBox(height: 10),
+//         Text(
+//           "Pearl",
+//           style: TextStyle(
+//             fontSize: 18,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.green.shade800, // deep olive for title
+//           ),
+//         ),
+//         const SizedBox(height: 5),
+//         Text(
+//           "software engineer",
+//           style: TextStyle(
+//             fontSize: 14,
+//             color: Colors.green.shade600, // softer olive for subtitle
+//           ),
+//         ),
+//       ],
+//     ),
+//   ),
+// ),
 
-Card(
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(15),
-  ),
-  elevation: 4,
-  color: Colors.green.shade50, // light olive background inside card
-  child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: Colors.green.shade700, // olive/darker green
-          child: const Icon(Icons.person, color: Colors.white, size: 30),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          "Pearl",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.green.shade800, // deep olive for title
-          ),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          "Software engineer",
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.green.shade600, // softer olive for subtitle
-          ),
-        ),
-      ],
-    ),
-  ),
-)
+// Card(
+//   shape: RoundedRectangleBorder(
+//     borderRadius: BorderRadius.circular(15),
+//   ),
+//   elevation: 4,
+//   color: Colors.green.shade50, // light olive background inside card
+//   child: Padding(
+//     padding: const EdgeInsets.all(16.0),
+//     child: Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         CircleAvatar(
+//           radius: 30,
+//           backgroundColor: Colors.green.shade700, // olive/darker green
+//           child: const Icon(Icons.person, color: Colors.white, size: 30),
+//         ),
+//         const SizedBox(height: 10),
+//         Text(
+//           "Pearl",
+//           style: TextStyle(
+//             fontSize: 18,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.green.shade800, // deep olive for title
+//           ),
+//         ),
+//         const SizedBox(height: 5),
+//         Text(
+//           "Software engineer",
+//           style: TextStyle(
+//             fontSize: 14,
+//             color: Colors.green.shade600, // softer olive for subtitle
+//           ),
+//         ),
+//       ],
+//     ),
+//   ),
+// )
 
-          ],
-        ),
-    )
-    );
-  }
-}
+//           ],
+//         ),
+//     )
+//     );
+//   }
+// }
 
 
 
