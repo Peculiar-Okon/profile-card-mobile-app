@@ -1576,340 +1576,340 @@
 //   }
 // }
 
-// import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-// void main() {
-//   runApp(const ProfileApp());
-// }
+void main() {
+  runApp(const ProfileApp());
+}
 
-// class ProfileApp extends StatelessWidget {
-//   const ProfileApp({super.key});
+class ProfileApp extends StatelessWidget {
+  const ProfileApp({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: "Pearl's Profile",
-//       theme: ThemeData(
-//         useMaterial3: true,
-//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-//       ),
-//       home: const ProfileScreen(),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Pearl's Profile",
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+      ),
+      home: const ProfileScreen(),
+    );
+  }
+}
 
-// class ProfileScreen extends StatelessWidget {
-//   const ProfileScreen({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
 
-//      return Scaffold(
-//       appBar: AppBar(
-//         title: const Text("Pearl's Profile"),
-//         centerTitle: true,
-//         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-//       ),
-//       body: LayoutBuilder(
-//         builder: (context, constraints) {
-//           if (constraints.maxWidth < 600) {
-//             return _buildMobileLayout();
-//           } else {
-//             return _buildWideLayout();
-//           }
-//         },
-//       ),
-//     );
-//   }
+     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Pearl's Profile"),
+        centerTitle: true,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth < 600) {
+            return _buildMobileLayout();
+          } else {
+            return _buildWideLayout();
+          }
+        },
+      ),
+    );
+  }
 
-//   Widget _buildMobileLayout() {
-//     return SingleChildScrollView(
-//       padding: const EdgeInsets.all(16),
-//       child: Column(
-//         children: const [
-//           ProfileHeader(),
-//           SizedBox(height: 24),
-//           ContactSection(),
-//           SizedBox(height: 24),
-//           SkillsSection(),
-//         ],
-//       ),
-//     );
-//   }
+  Widget _buildMobileLayout() {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        children: const [
+          ProfileHeader(),
+          SizedBox(height: 24),
+          ContactSection(),
+          SizedBox(height: 24),
+          SkillsSection(),
+        ],
+      ),
+    );
+  }
 
-//   Widget _buildWideLayout() {
-//     return SingleChildScrollView(
-//       padding: const EdgeInsets.all(32),
-//       child: Column( 
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//       children: [
-//         Row(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: const [
-//             Flexible(flex: 2, child: ProfileHeader()),
-//             SizedBox(width: 24),
-//             Flexible(
-//               flex: 3,
-//               child: Column(
-//                 children: [
-//                   ContactSection(),
-//                   SizedBox(height: 24),
-//                   SkillsSection(),
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//       ],
-//       )
-//     );
-//   }
-// }
+  Widget _buildWideLayout() {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(32),
+      child: Column( 
+        crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Flexible(flex: 2, child: ProfileHeader()),
+            SizedBox(width: 24),
+            Flexible(
+              flex: 3,
+              child: Column(
+                children: [
+                  ContactSection(),
+                  SizedBox(height: 24),
+                  SkillsSection(),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ],
+      )
+    );
+  }
+}
 
-// // PROFILE HEADER CARD
-// class ProfileHeader extends StatelessWidget {
-//   const ProfileHeader({super.key});
+// PROFILE HEADER CARD
+class ProfileHeader extends StatelessWidget {
+  const ProfileHeader({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Card(
-//       elevation: 6,
-//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-//       child: Padding(
-//         padding: const EdgeInsets.all(24),
-//         child: Column(
-//           children: [
-//             // Profile avatar
-//             Container(
-//               decoration: BoxDecoration(
-//                 shape: BoxShape.circle,
-//                 border: Border.all(
-//                   color: Theme.of(context).primaryColor,
-//                   width: 4,
-//                 ),
-//               ),
-//               child: CircleAvatar(
-//                 radius: 60,
-//                 backgroundColor: Theme.of(
-//                   context,
-//                 ).primaryColor.withValues( alpha: 0.3),
-//                 child: const Icon(Icons.person, size: 60, color: Colors.green),
-//               ),
-//             ),
-//             const SizedBox(height: 20),
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 6,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+            // Profile avatar
+            Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Theme.of(context).primaryColor,
+                  width: 4,
+                ),
+              ),
+              child: CircleAvatar(
+                radius: 60,
+                backgroundColor: Theme.of(
+                  context,
+                ).primaryColor.withValues( alpha: 0.3),
+                child: const Icon(Icons.person, size: 60, color: Colors.green),
+              ),
+            ),
+            const SizedBox(height: 20),
 
-//             // Name
-//             Text(
-//               "Peculiar Okon",
-//               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-//                 fontWeight: FontWeight.bold,
-//                 color: Colors.green.shade800,
-//               ),
-//             ),
-//             const SizedBox(height: 8),
+            // Name
+            Text(
+              "Peculiar Okon",
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+                color: Colors.green.shade800,
+              ),
+            ),
+            const SizedBox(height: 8),
 
-//             // Title
-//             Text(
-//               "Aspiring Software Engineer",
-//               style: Theme.of(
-//                 context,
-//               ).textTheme.titleMedium?.copyWith(color: Colors.grey.shade600),
-//             ),
-//             const SizedBox(height: 16),
+            // Title
+            Text(
+              "Aspiring Software Engineer",
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(color: Colors.grey.shade600),
+            ),
+            const SizedBox(height: 16),
 
-//             // Bio
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//               children: [
-//                 ElevatedButton.icon(
-//                   onPressed: () {
-//                     _launchUrl("https://your-cv-link.com/pearl_cv.pdf");
-//                   },
-//                   icon: const Icon(Icons.download),
-//                   label: const Text("Download CV"),
-//                   style: ElevatedButton.styleFrom(
-//                     backgroundColor: Colors.green.shade300, // match your theme
-//                     shape: RoundedRectangleBorder(
-//                       borderRadius: BorderRadius.circular(12),
-//                     ),
-//                   ),
-//                 ),
-//                 ElevatedButton.icon(
-//                   onPressed: () {
-//                     _launchUrl("https://github.com/Peculiar-Okon");
-//                   },
-//                   icon: const Icon(Icons.code),
-//                   label: const Text("GitHub"),
-//                   style: ElevatedButton.styleFrom(
-//                     backgroundColor: Colors.green.shade300,
-//                     shape: RoundedRectangleBorder(
-//                       borderRadius: BorderRadius.circular(12),
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//                const SizedBox(height: 20),
-//             Container(
-//               padding: const EdgeInsets.all(16),
-//               decoration: BoxDecoration(
-//                 color: Colors.green.shade50,
-//                 borderRadius: BorderRadius.circular(12),
-//                 border: Border.all(color: Colors.green.shade100),
-//               ),
-//               child: Text(
-//                 "I am passionate about technology, learning, and building solutions.",
-//                 textAlign: TextAlign.center,
-//                 style: Theme.of(context).textTheme.bodyMedium,
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+            // Bio
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton.icon(
+                  onPressed: () {
+                    _launchUrl("https://your-cv-link.com/pearl_cv.pdf");
+                  },
+                  icon: const Icon(Icons.download),
+                  label: const Text("Download CV"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green.shade300, // match your theme
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    _launchUrl("https://github.com/Peculiar-Okon");
+                  },
+                  icon: const Icon(Icons.code),
+                  label: const Text("GitHub"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green.shade300,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+               const SizedBox(height: 20),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.green.shade50,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.green.shade100),
+              ),
+              child: Text(
+                "I am passionate about technology, learning, and building solutions.",
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
-// // CONTACT SECTION
-// class ContactSection extends StatelessWidget {
-//   const ContactSection({super.key});
+// CONTACT SECTION
+class ContactSection extends StatelessWidget {
+  const ContactSection({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Card(
-//       elevation: 4,
-//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-//       child: Padding(
-//         padding: const EdgeInsets.all(20),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Text(
-//               "Contact Information",
-//               style: Theme.of(
-//                 context,
-//               ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-//             ),
-//             const SizedBox(height: 16),
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Contact Information",
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16),
 
-//             _buildContactItem(context, Icons.email, "pearlok20@gmail.com"),
-//             const SizedBox(height: 12),
-//             _buildContactItem(context, Icons.phone, "+234 810 687 2610"),
-//             const SizedBox(height: 12),
-//             _buildContactItem(context, Icons.location_on, "Uyo, Nigeria"),
-//             const SizedBox(height: 15,),
-//             // Social Media Row
-// Row(
-//   mainAxisAlignment: MainAxisAlignment.center,
-//   children: [
-//     IconButton(
-//       icon: const Icon(Icons.alternate_email, color: Colors.lightBlue),
-//       onPressed: () {
-//         _launchUrl("https://twitter.com/your-handle");
-//       },
-//     ),
-//     IconButton(
-//       icon: const Icon(Icons.camera_alt, color: Colors.purple),
-//       onPressed: () {
-//         _launchUrl("https://instagram.com/your-handle");
-//       },
-//     ),
-//     IconButton(
-//       icon: const Icon(Icons.work, color: Colors.blueGrey),
-//       onPressed: () {
-//         _launchUrl("https://linkedin.com/in/your-profile");
-//       },
-//     ),
-//   ],
-// ),
+            _buildContactItem(context, Icons.email, "pearlok20@gmail.com"),
+            const SizedBox(height: 12),
+            _buildContactItem(context, Icons.phone, "+234 810 687 2610"),
+            const SizedBox(height: 12),
+            _buildContactItem(context, Icons.location_on, "Uyo, Nigeria"),
+            const SizedBox(height: 15,),
+            // Social Media Row
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    IconButton(
+      icon: const Icon(Icons.alternate_email, color: Colors.lightBlue),
+      onPressed: () {
+        _launchUrl("https://twitter.com/your-handle");
+      },
+    ),
+    IconButton(
+      icon: const Icon(Icons.camera_alt, color: Colors.purple),
+      onPressed: () {
+        _launchUrl("https://instagram.com/your-handle");
+      },
+    ),
+    IconButton(
+      icon: const Icon(Icons.work, color: Colors.blueGrey),
+      onPressed: () {
+        _launchUrl("https://linkedin.com/in/your-profile");
+      },
+    ),
+  ],
+),
 
-//           ],
-//         ),
-//       ),
-//     );
-//   }
+          ],
+        ),
+      ),
+    );
+  }
 
-//   Widget _buildContactItem(BuildContext context, IconData icon, String text) {
-//     return Row(
-//       children: [
-//         Container(
-//           padding: const EdgeInsets.all(8),
-//           decoration: BoxDecoration(
-//             color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
-//             borderRadius: BorderRadius.circular(8),
-//           ),
-//           child: Icon(icon, color: Theme.of(context).primaryColor, size: 20),
-//         ),
-//         const SizedBox(width: 12),
-//         Expanded(
-//           child: Text(text, style: Theme.of(context).textTheme.bodyMedium),
-//         ),
-//       ],
-//     );
-//   }
-// }
+  Widget _buildContactItem(BuildContext context, IconData icon, String text) {
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, color: Theme.of(context).primaryColor, size: 20),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(text, style: Theme.of(context).textTheme.bodyMedium),
+        ),
+      ],
+    );
+  }
+}
 
-// // SKILLS SECTION
-// class SkillsSection extends StatelessWidget {
-//   const SkillsSection({super.key});
+// SKILLS SECTION
+class SkillsSection extends StatelessWidget {
+  const SkillsSection({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     final skills = ["Flutter", "Javascript", "React"];
+  @override
+  Widget build(BuildContext context) {
+    final skills = ["Flutter", "Javascript", "React"];
 
-//     return Card(
-//       elevation: 4,
-//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-//       child: Padding(
-//         padding: const EdgeInsets.all(20),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Text(
-//               "My Skills",
-//               style: Theme.of(
-//                 context,
-//               ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-//             ),
-//             const SizedBox(height: 16),
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "My Skills",
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16),
 
-//             Wrap(
-//               spacing: 8,
-//               runSpacing: 8,
-//               children: skills
-//                   .map((skill) => _buildSkillChip(context, skill))
-//                   .toList(),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: skills
+                  .map((skill) => _buildSkillChip(context, skill))
+                  .toList(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
-//   Widget _buildSkillChip(BuildContext context, String skill) {
-//     return Container(
-//       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-//       decoration: BoxDecoration(
-//         color: Colors.green.shade50,
-//         borderRadius: BorderRadius.circular(20),
-//         border: Border.all(color: Colors.green.shade200),
-//       ),
-//       child: Text(
-//         skill,
-//         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-//           color: Colors.green.shade800,
-//           fontWeight: FontWeight.w500,
-//         ),
-//       ),
-//     );
-//   }
-// }
+  Widget _buildSkillChip(BuildContext context, String skill) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.green.shade50,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.green.shade200),
+      ),
+      child: Text(
+        skill,
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+          color: Colors.green.shade800,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
+    );
+  }
+}
 
-// Future<void> _launchUrl(String url) async {
-//   final Uri uri = Uri.parse(url);
-//   if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-//     throw Exception('Could not launch $url');
-//   }
-// }
+Future<void> _launchUrl(String url) async {
+  final Uri uri = Uri.parse(url);
+  if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+    throw Exception('Could not launch $url');
+  }
+}
 
