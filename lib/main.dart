@@ -648,184 +648,184 @@
 // }
 
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Profile Cards App",
-      home: ProfileScreen(),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: "Profile Cards App",
+//       home: ProfileScreen(),
+//     );
+//   }
+// }
 
-class ProfileScreen extends StatefulWidget {
-  @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
+// class ProfileScreen extends StatefulWidget {
+//   @override
+//   State<ProfileScreen> createState() => _ProfileScreenState();
+// }
 
-class _ProfileScreenState extends State<ProfileScreen> {
-  // fake profile data
-  final List<Map<String, String>> profiles = [
-    {"name": "Pearl", "desc": "Future Robotics Engineer "},
-    {"name": "Alex", "desc": "AI Enthusiast "},
-    {"name": "Sam", "desc": "Mobile App Developer "},
-    {"name": "Taylor", "desc": "UI/UX Designer "},
-  ];
+// class _ProfileScreenState extends State<ProfileScreen> {
+//   // fake profile data
+//   final List<Map<String, String>> profiles = [
+//     {"name": "Pearl", "desc": "Future Robotics Engineer "},
+//     {"name": "Alex", "desc": "AI Enthusiast "},
+//     {"name": "Sam", "desc": "Mobile App Developer "},
+//     {"name": "Taylor", "desc": "UI/UX Designer "},
+//   ];
 
-  // track views
-  final Map<String, int> views = {};
+//   // track views
+//   final Map<String, int> views = {};
 
-  @override
-  void initState() {
-    super.initState();
-    for (var profile in profiles) {
-      views[profile["name"]!] = 0; // initialize counters
-    }
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     for (var profile in profiles) {
+//       views[profile["name"]!] = 0; // initialize counters
+//     }
+//   }
 
-  void _incrementView(String name) {
-    setState(() {
-      views[name] = (views[name] ?? 0) + 1;
-    });
-  }
+//   void _incrementView(String name) {
+//     setState(() {
+//       views[name] = (views[name] ?? 0) + 1;
+//     });
+//   }
 
-  void _openProfileModal(String name, String desc) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) {
-        return ProfileModal(
-          name: name,
-          desc: desc,
-          onViewed: () => _incrementView(name),
-        );
-      },
-    );
-  }
+//   void _openProfileModal(String name, String desc) {
+//     showModalBottomSheet(
+//       context: context,
+//       builder: (context) {
+//         return ProfileModal(
+//           name: name,
+//           desc: desc,
+//           onViewed: () => _incrementView(name),
+//         );
+//       },
+//     );
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Pearl's Profile Cards"),
-        centerTitle: true,
-        backgroundColor: Colors.green.shade400,
-      ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(12),
-        itemCount: profiles.length,
-        itemBuilder: (context, index) {
-          final profile = profiles[index];
-          final name = profile["name"]!;
-          final desc = profile["desc"]!;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text("Pearl's Profile Cards"),
+//         centerTitle: true,
+//         backgroundColor: Colors.green.shade400,
+//       ),
+//       body: ListView.builder(
+//         padding: const EdgeInsets.all(12),
+//         itemCount: profiles.length,
+//         itemBuilder: (context, index) {
+//           final profile = profiles[index];
+//           final name = profile["name"]!;
+//           final desc = profile["desc"]!;
 
-          return GestureDetector(
-            onTap: () => _openProfileModal(name, desc),
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              elevation: 4,
-              color: Colors.green.shade50,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.green.shade700,
-                      child: const Icon(Icons.person, color: Colors.white, size: 30),
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      name,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.green.shade800,
-                      ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      desc,
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.green.shade600,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(Icons.remove_red_eye, size: 18, color: Colors.grey),
-                        const SizedBox(width: 4),
-                        Text("${views[name]} views"),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
+//           return GestureDetector(
+//             onTap: () => _openProfileModal(name, desc),
+//             child: Card(
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(15),
+//               ),
+//               elevation: 4,
+//               color: Colors.green.shade50,
+//               child: Padding(
+//                 padding: const EdgeInsets.all(16.0),
+//                 child: Column(
+//                   mainAxisSize: MainAxisSize.min,
+//                   children: [
+//                     CircleAvatar(
+//                       radius: 30,
+//                       backgroundColor: Colors.green.shade700,
+//                       child: const Icon(Icons.person, color: Colors.white, size: 30),
+//                     ),
+//                     const SizedBox(height: 10),
+//                     Text(
+//                       name,
+//                       style: TextStyle(
+//                         fontSize: 18,
+//                         fontWeight: FontWeight.bold,
+//                         color: Colors.green.shade800,
+//                       ),
+//                     ),
+//                     const SizedBox(height: 5),
+//                     Text(
+//                       desc,
+//                       style: TextStyle(
+//                         fontSize: 14,
+//                         color: Colors.green.shade600,
+//                       ),
+//                     ),
+//                     const SizedBox(height: 10),
+//                     Row(
+//                       mainAxisAlignment: MainAxisAlignment.center,
+//                       children: [
+//                         const Icon(Icons.remove_red_eye, size: 18, color: Colors.grey),
+//                         const SizedBox(width: 4),
+//                         Text("${views[name]} views"),
+//                       ],
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }
 
-class ProfileModal extends StatefulWidget {
-  final String name;
-  final String desc;
-  final VoidCallback onViewed;
+// class ProfileModal extends StatefulWidget {
+//   final String name;
+//   final String desc;
+//   final VoidCallback onViewed;
 
-  const ProfileModal({
-    super.key,
-    required this.name,
-    required this.desc,
-    required this.onViewed,
-  });
+//   const ProfileModal({
+//     super.key,
+//     required this.name,
+//     required this.desc,
+//     required this.onViewed,
+//   });
 
-  @override
-  State<ProfileModal> createState() => _ProfileModalState();
-}
+//   @override
+//   State<ProfileModal> createState() => _ProfileModalState();
+// }
 
-class _ProfileModalState extends State<ProfileModal> {
-  @override
-  void initState() {
-    super.initState();
-   // schedule increment after build finishes
-  WidgetsBinding.instance.addPostFrameCallback((_) {
-    widget.onViewed();
-  });
-  }
+// class _ProfileModalState extends State<ProfileModal> {
+//   @override
+//   void initState() {
+//     super.initState();
+//    // schedule increment after build finishes
+//   WidgetsBinding.instance.addPostFrameCallback((_) {
+//     widget.onViewed();
+//   });
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(widget.name,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 10),
-          Text(widget.desc),
-          const SizedBox(height: 20),
-          const Text("More details about this profile can go here..."),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       padding: const EdgeInsets.all(20),
+//       child: Column(
+//         mainAxisSize: MainAxisSize.min,
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         children: [
+//           Text(widget.name,
+//               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+//           const SizedBox(height: 10),
+//           Text(widget.desc),
+//           const SizedBox(height: 20),
+//           const Text("More details about this profile can go here..."),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 // import 'package:flutter/material.dart';
 
