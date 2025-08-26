@@ -259,86 +259,92 @@
 //   }
 // }
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// void main() {
+//   runApp(const MyApp());
+// }
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-            title: "Profile Cards App",
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Pearl's Profile Cards"),
-          centerTitle: true,
-          backgroundColor: Colors.green.shade400,
-    ),
-     body: ListView(
-          padding: const EdgeInsets.all(12),
-          children: [
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              elevation: 4,
-              child: const ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.green,
-                  child: Icon(Icons.person, color: Colors.white),
-                ),
-                title: Text("Pearl"),
-                subtitle: Text("Future Robotics Engineer 🤖"),
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              elevation: 4,
-              child: const ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.green,
-                  child: Icon(Icons.person, color: Colors.white),
-                ),
-                title: Text("Peculiar"),
-                subtitle: Text("Creative Writer ✍️"),
-              ),
-            ),
-             Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              elevation: 4,
-              child: const ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.green,
-                  child: Icon(Icons.person, color: Colors.white),
-                ),
-                title: Text("Peculiar"),
-                subtitle: Text("Creative Writer ✍️"),
-              ),
-            ),
-             Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-              elevation: 4,
-              child: const ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.green,
-                  child: Icon(Icons.person, color: Colors.white),
-                ),
-                title: Text("Peculiar"),
-                subtitle: Text("Creative Writer ✍️"),
-              ),
-            ),
-          ],
-        ),
-    )
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//             title: "Profile Cards App",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Pearl's Profile Cards"),
+//           centerTitle: true,
+//           backgroundColor: Colors.green.shade400,
+//     ),
+//      body: ListView(
+//           padding: const EdgeInsets.all(12),
+//           children: [
+//             Card(
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(15),
+//               ),
+//               elevation: 4,
+//               child: const ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundColor: Colors.green,
+//                   child: Icon(Icons.person, color: Colors.white),
+//                 ),
+//                 title: Text("Pearl"),
+//                 subtitle: Text("Future Robotics Engineer 🤖"),
+//               ),
+//             ),
+//             Card(
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(15),
+//               ),
+//               elevation: 4,
+//               child: const ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundColor: Colors.green,
+//                   child: Icon(Icons.person, color: Colors.white),
+//                 ),
+//                 title: Text("Peculiar"),
+//                 subtitle: Text("Creative Writer ✍️"),
+//               ),
+//             ),
+//              Card(
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(15),
+//               ),
+//               elevation: 4,
+//               child: const ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundColor: Colors.green,
+//                   child: Icon(Icons.person, color: Colors.white),
+//                 ),
+//                 title: Text("Peculiar"),
+//                 subtitle: Text("Creative Writer ✍️"),
+//               ),
+//             ),
+//              Card(
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(15),
+//               ),
+//               elevation: 4,
+//               child: const ListTile(
+//                 leading: CircleAvatar(
+//                   backgroundColor: Colors.green,
+//                   child: Icon(Icons.person, color: Colors.white),
+//                 ),
+//                 title: Text("Peculiar"),
+//                 subtitle: Text("Creative Writer ✍️"),
+//               ),
+//             ),
+//           ],
+//         ),
+//     )
+//     );
+//   }
+// }
+
+
 
 
 
