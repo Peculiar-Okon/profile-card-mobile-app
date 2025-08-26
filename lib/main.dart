@@ -991,164 +991,164 @@
 //   }
 // }
 
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(const MaterialApp(
-//     title: "Profile Cards App",
-//     home: MyApp(),
-//   ));
-// }
+void main() {
+  runApp(const MaterialApp(
+    title: "Profile Cards App",
+    home: MyApp(),
+  ));
+}
 
-// class MyApp extends StatefulWidget {
-//   const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
 
-//   @override
-//   State<MyApp> createState() => _MyAppState();
-// }
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
-// class _MyAppState extends State<MyApp> {
-//   // keep view counts for each card
-//   final List<int> _viewCounts = [0, 0, 0, 0];
+class _MyAppState extends State<MyApp> {
+  // keep view counts for each card
+  final List<int> _viewCounts = [0, 0, 0, 0];
 
-//   void _openProfile(int index) {
-//     showModalBottomSheet(
-//       context: context,
-//       builder: (_) => ProfileModal(
-//         name: "Pearl",
-//         description: "Future Robotics Engineer 🤖",
-//         onViewed: () {
-//           setState(() {
-//             _viewCounts[index]++;
-//           });
-//         },
-//       ),
-//     );
-//   }
+  void _openProfile(int index) {
+    showModalBottomSheet(
+      context: context,
+      builder: (_) => ProfileModal(
+        name: "Pearl",
+        description: "Future Robotics Engineer 🤖",
+        onViewed: () {
+          setState(() {
+            _viewCounts[index]++;
+          });
+        },
+      ),
+    );
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text("Pearl's Profile Cards"),
-//         centerTitle: true,
-//         backgroundColor: Colors.green.shade400,
-//       ),
-//       body: ListView(
-//         padding: const EdgeInsets.all(12),
-//         children: [
-//           _buildProfileCard(0),
-//           _buildProfileCard(1),
-//           _buildProfileCard(2),
-//           _buildProfileCard(3),
-//         ],
-//       ),
-//     );
-//   }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Pearl's Profile Cards"),
+        centerTitle: true,
+        backgroundColor: Colors.green.shade400,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(12),
+        children: [
+          _buildProfileCard(0),
+          _buildProfileCard(1),
+          _buildProfileCard(2),
+          _buildProfileCard(3),
+        ],
+      ),
+    );
+  }
 
-//   Widget _buildProfileCard(int index) {
-//     return GestureDetector(
-//       onTap: () => _openProfile(index),
-//       child: Card(
-//         shape: RoundedRectangleBorder(
-//           borderRadius: BorderRadius.circular(15),
-//         ),
-//         elevation: 4,
-//         color: Colors.green.shade50,
-//         child: Padding(
-//           padding: const EdgeInsets.all(16.0),
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: [
-//               CircleAvatar(
-//                 radius: 30,
-//                 backgroundColor: Colors.green.shade700,
-//                 child: const Icon(Icons.person, color: Colors.white, size: 30),
-//               ),
-//               const SizedBox(height: 10),
-//               Text(
-//                 "Pearl",
-//                 style: TextStyle(
-//                   fontSize: 18,
-//                   fontWeight: FontWeight.bold,
-//                   color: Colors.green.shade800,
-//                 ),
-//               ),
-//               const SizedBox(height: 5),
-//               Text(
-//                 "Future Robotics Engineer 🤖",
-//                 style: TextStyle(
-//                   fontSize: 14,
-//                   color: Colors.green.shade600,
-//                 ),
-//               ),
-//               const SizedBox(height: 10),
-//               // 👁️ eye icon + counter
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.center,
-//                 children: [
-//                   const Icon(Icons.remove_red_eye, size: 18, color: Colors.grey),
-//                   const SizedBox(width: 4),
-//                   Text("${_viewCounts[index]} views"),
-//                 ],
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
+  Widget _buildProfileCard(int index) {
+    return GestureDetector(
+      onTap: () => _openProfile(index),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        elevation: 4,
+        color: Colors.green.shade50,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.green.shade700,
+                child: const Icon(Icons.person, color: Colors.white, size: 30),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                "Pearl",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green.shade800,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                "Future Robotics Engineer 🤖",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.green.shade600,
+                ),
+              ),
+              const SizedBox(height: 10),
+              // 👁️ eye icon + counter
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.remove_red_eye, size: 18, color: Colors.grey),
+                  const SizedBox(width: 4),
+                  Text("${_viewCounts[index]} views"),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
-// }
+}
 
-// class ProfileModal extends StatefulWidget {
-//   final String name;
-//   final String description;
-//   final VoidCallback onViewed;
+class ProfileModal extends StatefulWidget {
+  final String name;
+  final String description;
+  final VoidCallback onViewed;
 
-//   const ProfileModal({
-//     super.key,
-//     required this.name,
-//     required this.description,
-//     required this.onViewed,
-//   });
+  const ProfileModal({
+    super.key,
+    required this.name,
+    required this.description,
+    required this.onViewed,
+  });
 
-//   @override
-//   State<ProfileModal> createState() => _ProfileModalState();
-// }
+  @override
+  State<ProfileModal> createState() => _ProfileModalState();
+}
 
-// class _ProfileModalState extends State<ProfileModal> {
-//   @override
-//   void initState() {
-//     super.initState();
-//     // schedule increment AFTER build
-//     WidgetsBinding.instance.addPostFrameCallback((_) {
-//       widget.onViewed();
-//     });
-//   }
+class _ProfileModalState extends State<ProfileModal> {
+  @override
+  void initState() {
+    super.initState();
+    // schedule increment AFTER build
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      widget.onViewed();
+    });
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: const EdgeInsets.all(30),
-//       child: Column(
-//         mainAxisSize: MainAxisSize.min,
-//         children: [
-//           Text(widget.name,
-//               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-//           const SizedBox(height: 5),
-//           Text(widget.description,
-//               style: const TextStyle(fontSize: 16, color: Colors.grey)),
-//           const SizedBox(height: 15),
-//           ElevatedButton(
-//             onPressed: () => Navigator.pop(context),
-//             child: const Text("Close"),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(30),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(widget.name,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 5),
+          Text(widget.description,
+              style: const TextStyle(fontSize: 16, color: Colors.grey)),
+          const SizedBox(height: 15),
+          ElevatedButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Close"),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 // import 'package:flutter/material.dart';
 
