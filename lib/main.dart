@@ -1150,214 +1150,214 @@
 //   }
 // }
 
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
+void main() {
+  runApp(const MyApp());
+}
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(title: "Profile Cards App", home: const ProfileScreen());
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(title: "Profile Cards App", home: const ProfileScreen());
+  }
+}
 
-// class ProfileScreen extends StatefulWidget {
-//   const ProfileScreen({super.key});
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
 
-//   @override
-//   State<ProfileScreen> createState() => _ProfileScreenState();
-// }
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
 
-// class _ProfileScreenState extends State<ProfileScreen> {
-//   // Track views for each card
-//   final List<int> _views = [0, 0, 0, 0];
+class _ProfileScreenState extends State<ProfileScreen> {
+  // Track views for each card
+  final List<int> _views = [0, 0, 0, 0];
 
-//   void _openProfileModal(int index, String name, String bio, String details) {
-//     showModalBottomSheet(
-//       context: context,
-//       builder: (context) {
-//         return ProfileModal(
-//           name: name,
-//           bio: bio,
-//           details: details,
-//           onViewed: () {
-//             setState(() {
-//               _views[index]++; // increment count when modal is opened
-//             });
-//           },
-//         );
-//       },
-//     );
-//   }
+  void _openProfileModal(int index, String name, String bio, String details) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return ProfileModal(
+          name: name,
+          bio: bio,
+          details: details,
+          onViewed: () {
+            setState(() {
+              _views[index]++; // increment count when modal is opened
+            });
+          },
+        );
+      },
+    );
+  }
 
-//   Widget _buildProfileCard(int index, String name, String bio, String details) {
-//     return GestureDetector(
-//       onTap: () => _openProfileModal(index, name, bio, details),
-//       child: Card(
-//         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-//         elevation: 4,
-//         color: Colors.green.shade50,
-//         child: Padding(
-//           padding: const EdgeInsets.all(16.0),
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: [
-//               CircleAvatar(
-//                 radius: 30,
-//                 backgroundColor: Colors.green.shade700,
-//                 child: const Icon(Icons.person, color: Colors.white, size: 30),
-//               ),
-//               const SizedBox(height: 10),
-//               Text(
-//                 name,
-//                 style: TextStyle(
-//                   fontSize: 18,
-//                   fontWeight: FontWeight.bold,
-//                   color: Colors.green.shade800,
-//                 ),
-//               ),
-//               const SizedBox(height: 5),
-//               Text(
-//                 bio,
-//                 style: TextStyle(fontSize: 14, color: Colors.green.shade600),
-//               ),
-//               const SizedBox(height: 10),
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 children: [
-//                   const Icon(
-//                     Icons.remove_red_eye,
-//                     size: 18,
-//                     color: Colors.grey,
-//                   ),
-//                   const SizedBox(width: 5),
-//                   Text(
-//                     "${_views[index]} views",
-//                     style: const TextStyle(fontSize: 12),
-//                   ),
-//                 ],
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
+  Widget _buildProfileCard(int index, String name, String bio, String details) {
+    return GestureDetector(
+      onTap: () => _openProfileModal(index, name, bio, details),
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        elevation: 4,
+        color: Colors.green.shade50,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.green.shade700,
+                child: const Icon(Icons.person, color: Colors.white, size: 30),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                name,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green.shade800,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                bio,
+                style: TextStyle(fontSize: 14, color: Colors.green.shade600),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Icon(
+                    Icons.remove_red_eye,
+                    size: 18,
+                    color: Colors.grey,
+                  ),
+                  const SizedBox(width: 5),
+                  Text(
+                    "${_views[index]} views",
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text("Pearl's Profile Cards"),
-//         centerTitle: true,
-//         backgroundColor: Colors.green.shade400,
-//       ),
-//       body: ListView(
-//         padding: const EdgeInsets.all(12),
-//         children: [
-//           _buildProfileCard(
-//             0,
-//             "Pearl",
-//             "About Pearl",
-//             "Pearl is someone who is passionate about learning and building",
-//           ),
-//           _buildProfileCard(
-//             1,
-//             "Hobbies",
-//             "About my hobbies",
-//             "Pearl loves to sing and read",
-//           ),
-//           _buildProfileCard(
-//             2,
-//             "Contact",
-//             "pearlok20@gmail.com",
-//             "You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.",
-//           ),
-//           _buildProfileCard(
-//             3,
-//             "Career",
-//             "Software Engineer",
-//             "Apassionate Software engineer who will make an impact",
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Pearl's Profile Cards"),
+        centerTitle: true,
+        backgroundColor: Colors.green.shade400,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(12),
+        children: [
+          _buildProfileCard(
+            0,
+            "Pearl",
+            "About Pearl",
+            "Pearl is someone who is passionate about learning and building",
+          ),
+          _buildProfileCard(
+            1,
+            "Hobbies",
+            "About my hobbies",
+            "Pearl loves to sing and read",
+          ),
+          _buildProfileCard(
+            2,
+            "Contact",
+            "pearlok20@gmail.com",
+            "You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.You can contact me here or go to my github for more info.",
+          ),
+          _buildProfileCard(
+            3,
+            "Career",
+            "Software Engineer",
+            "Apassionate Software engineer who will make an impact",
+          ),
+        ],
+      ),
+    );
+  }
+}
 
-// // MODAL WIDGET
-// class ProfileModal extends StatefulWidget {
-//   final String name;
-//   final String bio;
-//   final String details;
-//   final VoidCallback onViewed;
+// MODAL WIDGET
+class ProfileModal extends StatefulWidget {
+  final String name;
+  final String bio;
+  final String details;
+  final VoidCallback onViewed;
 
-//   const ProfileModal({
-//     super.key,
-//     required this.name,
-//     required this.bio,
-//     required this.details,
-//     required this.onViewed,
-//   });
+  const ProfileModal({
+    super.key,
+    required this.name,
+    required this.bio,
+    required this.details,
+    required this.onViewed,
+  });
 
-//   @override
-//   State<ProfileModal> createState() => _ProfileModalState();
-// }
+  @override
+  State<ProfileModal> createState() => _ProfileModalState();
+}
 
-// class _ProfileModalState extends State<ProfileModal> {
-//   @override
-//   void initState() {
-//     super.initState();
-//     WidgetsBinding.instance.addPostFrameCallback((_) {
-//       widget.onViewed(); // safe now
-//     }); // increment count as soon as modal is opened
-//   }
+class _ProfileModalState extends State<ProfileModal> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      widget.onViewed(); // safe now
+    }); // increment count as soon as modal is opened
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: EdgeInsetsGeometry.all(20),
-//       child: Container(
-//         width: double.infinity,
-//         // padding: const EdgeInsets.all(20),
-//         child: Column(
-//           mainAxisSize: MainAxisSize.min,
-//           children: [
-//             Text(
-//               widget.name,
-//               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-//             ),
-//             const SizedBox(height: 8),
-//             Text(widget.bio, style: const TextStyle(fontSize: 16)),
-//             const SizedBox(height: 15),
-//             // Extra details only in modal
-//             const Divider(endIndent: 20, indent: 20),
-//             const Text(
-//               "More about me:",
-//               style: TextStyle(fontWeight: FontWeight.bold),
-//             ),
-//             const SizedBox(height: 5),
-//             Text(widget.details),
-//             const SizedBox(height: 20),
-//             ElevatedButton(
-//               style: ElevatedButton.styleFrom(
-//                 backgroundColor: Colors.grey[300],
-//                 textStyle: TextStyle(color: Colors.black12),
-//               ),
-//               onPressed: () => Navigator.pop(context),
-//               child: const Text("Close"),
-//             ),
-//             const SizedBox(height: 20,)
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsetsGeometry.all(20),
+      child: Container(
+        width: double.infinity,
+        // padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              widget.name,
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(widget.bio, style: const TextStyle(fontSize: 16)),
+            const SizedBox(height: 15),
+            // Extra details only in modal
+            const Divider(endIndent: 20, indent: 20),
+            const Text(
+              "More about me:",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 5),
+            Text(widget.details),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.grey[300],
+                textStyle: TextStyle(color: Colors.black12),
+              ),
+              onPressed: () => Navigator.pop(context),
+              child: const Text("Close"),
+            ),
+            const SizedBox(height: 20,)
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 // import 'package:flutter/material.dart';
 
