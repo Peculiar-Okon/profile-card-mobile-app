@@ -61,7 +61,7 @@ class DetailsView extends StatelessWidget {
   }
 }
 
-//reusable widget
+
 class HeaderText extends StatelessWidget {
   const HeaderText(
     this.text, {
