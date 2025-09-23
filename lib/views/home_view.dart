@@ -101,30 +101,30 @@ class FirstSection extends StatelessWidget {
   }
 }
 
-class SecondSection extends StatelessWidget {
-  const SecondSection({super.key});
+// class SecondSection extends StatelessWidget {
+//   const SecondSection({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(height: 15),
-          Padding(
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'An engineer passionate about building personalized systems and apps that solve user problems.',
-              textAlign: TextAlign
-                  .center, // This is the correct way to center the text
-              style: TextStyle(fontSize: 18, color: Theme.of(context).colorScheme.inversePrimary),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//       child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           SizedBox(height: 15),
+//           Padding(
+//             padding: EdgeInsets.all(10),
+//             child: Text(
+//               'An engineer passionate about building personalized systems and apps that solve user problems.',
+//               textAlign: TextAlign
+//                   .center, // This is the correct way to center the text
+//               style: TextStyle(fontSize: 18, color: Theme.of(context).colorScheme.inversePrimary),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 class FirstPgLinkButton extends StatelessWidget {
   const FirstPgLinkButton({super.key});
