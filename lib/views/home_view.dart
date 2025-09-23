@@ -163,95 +163,95 @@ class FirstPgLinkButton extends StatelessWidget {
   }
 }
 
-// class IconSection extends StatelessWidget {
-//   const IconSection({super.key});
+class IconSection extends StatelessWidget {
+  const IconSection({super.key});
 
-//   Future<void> _launchUrl(String url) async {
-//     final Uri uri = Uri.parse(url);
-//     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-//       throw Exception('Could not launch $url');
-//     }
-//   }
+  Future<void> _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       mainAxisAlignment:
-//           MainAxisAlignment.center, // Centers the row horizontally
-//       children: [
-//         // Twitter Icon
-//         InkWell(
-//           onTap: () {
-//             _launchUrl('https://x.com/ThatghurlPearl');
-//           },
-//           child: Container(
-//             width: 70, // Increased size
-//             height: 70, // Increased size
-//             decoration: BoxDecoration(
-//               shape: BoxShape.circle,
-//               color: Theme.of(context).colorScheme.primary, // First icon background color
-//               boxShadow: [
-//                 BoxShadow(
-//                   color: Colors.black26,
-//                   blurRadius: 10,
-//                   offset: Offset(0, 5),
-//                 ),
-//               ],
-//             ),
-//             child: const Icon(Icons.alternate_email, color: Colors.white),
-//           ),
-//         ),
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment:
+          MainAxisAlignment.center, // Centers the row horizontally
+      children: [
+        // Twitter Icon
+        InkWell(
+          onTap: () {
+            _launchUrl('https://x.com/ThatghurlPearl');
+          },
+          child: Container(
+            width: 70, // Increased size
+            height: 70, // Increased size
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Theme.of(context).colorScheme.primary, // First icon background color
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 10,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+            child: const Icon(Icons.alternate_email, color: Colors.white),
+          ),
+        ),
 
-//         const SizedBox(width: 35), // Increased spacing
-//         // LinkedIn Icon
-//         InkWell(
-//           onTap: () {
-//             _launchUrl(
-//               'https://www.linkedin.com/in/pearl-🌐✨-b94903329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-//             );
-//           },
-//           child: Container(
-//             width: 70, // Increased size
-//             height: 70, // Increased size
-//             decoration: BoxDecoration(
-//               shape: BoxShape.circle,
-//               color: Theme.of(context).colorScheme.primary, // Greenish-blue color
-//               boxShadow: [
-//                 BoxShadow(
-//                   color: Colors.black26,
-//                   blurRadius: 10,
-//                   offset: Offset(0, 5),
-//                 ),
-//               ],
-//             ),
-//             child: const Icon(Icons.badge, color: Colors.white),
-//           ),
-//         ),
+        const SizedBox(width: 35), // Increased spacing
+        // LinkedIn Icon
+        InkWell(
+          onTap: () {
+            _launchUrl(
+              'https://www.linkedin.com/in/pearl-🌐✨-b94903329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            );
+          },
+          child: Container(
+            width: 70, // Increased size
+            height: 70, // Increased size
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Theme.of(context).colorScheme.primary, // Greenish-blue color
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 10,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+            child: const Icon(Icons.badge, color: Colors.white),
+          ),
+        ),
 
-//         const SizedBox(width: 35), // Increased spacing
-//         // Instagram Icon
-//         InkWell(
-//           onTap: () {
-//             _launchUrl('https://instagram.com/pearly_ghurl__');
-//           },
-//           child: Container(
-//             width: 70, // Increased size
-//             height: 70, // Increased size
-//             decoration: BoxDecoration(
-//               shape: BoxShape.circle,
-//               color: Theme.of(context).colorScheme.primary, // Plain blue color
-//               boxShadow: [
-//                 BoxShadow(
-//                   color: Colors.black26,
-//                   blurRadius: 10,
-//                   offset: Offset(0, 5),
-//                 ),
-//               ],
-//             ),
-//             child: const Icon(Icons.camera_alt, color: Colors.white),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }
+        const SizedBox(width: 35), // Increased spacing
+        // Instagram Icon
+        InkWell(
+          onTap: () {
+            _launchUrl('https://instagram.com/pearly_ghurl__');
+          },
+          child: Container(
+            width: 70, // Increased size
+            height: 70, // Increased size
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Theme.of(context).colorScheme.primary, // Plain blue color
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 10,
+                  offset: Offset(0, 5),
+                ),
+              ],
+            ),
+            child: const Icon(Icons.camera_alt, color: Colors.white),
+          ),
+        ),
+      ],
+    );
+  }
+}
