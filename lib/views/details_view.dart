@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'user_rating.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DetailsView extends StatelessWidget {
