@@ -126,42 +126,42 @@ class SecondSection extends StatelessWidget {
   }
 }
 
-class FirstPgLinkButton extends StatelessWidget {
-  const FirstPgLinkButton({super.key});
+// class FirstPgLinkButton extends StatelessWidget {
+//   const FirstPgLinkButton({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-      ),
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 200,
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(30),
+//       ),
       
-      child: ElevatedButton(
+//       child: ElevatedButton(
         
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const DetailsView()),
-          );
-        },
-        style: ElevatedButton.styleFrom(
-          backgroundColor:
-            Theme.of(context).colorScheme.primary, 
-            foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-        ),
-        child: const Text(
-          'Learn More',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-      ),
-    );
-  }
-}
+//         onPressed: () {
+//           Navigator.push(
+//             context,
+//             MaterialPageRoute(builder: (context) => const DetailsView()),
+//           );
+//         },
+//         style: ElevatedButton.styleFrom(
+//           backgroundColor:
+//             Theme.of(context).colorScheme.primary, 
+//             foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+//           shape: RoundedRectangleBorder(
+//             borderRadius: BorderRadius.circular(30),
+//           ),
+//           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+//         ),
+//         child: const Text(
+//           'Learn More',
+//           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 class IconSection extends StatelessWidget {
   const IconSection({super.key});
