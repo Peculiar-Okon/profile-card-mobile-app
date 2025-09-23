@@ -58,48 +58,48 @@ class HomeView extends StatelessWidget {
   }
 }
 
-// class FirstSection extends StatelessWidget {
-//   const FirstSection({super.key});
+class FirstSection extends StatelessWidget {
+  const FirstSection({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Container(
-//             width: 150,
-//             height: 150,
-//             decoration: BoxDecoration(
-//               shape: BoxShape.circle,
-//               boxShadow: [
-//                 BoxShadow(
-//                   color: Colors.black26,
-//                   blurRadius: 20,
-//                   offset: Offset(10, 15),
-//                 ),
-//               ],
-//               image: DecorationImage(
-//                 image: AssetImage("assets/a_photo.jpg"),
-//                 fit: BoxFit.cover,
-//               ),
-//             ),
-//           ),
-//           SizedBox(height: 18),
-//           Text(
-//             'Peculiar Okon',
-//             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-//           ),
-//           SizedBox(height: 12),
-//           Text(
-//             'Software Engineer',
-//             style: TextStyle(fontSize: 18, color: Colors.grey),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 20,
+                  offset: Offset(10, 15),
+                ),
+              ],
+              image: DecorationImage(
+                image: AssetImage("assets/a_photo.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          SizedBox(height: 18),
+          Text(
+            'Peculiar Okon',
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 12),
+          Text(
+            'Software Engineer',
+            style: TextStyle(fontSize: 18, color: Colors.grey),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class SecondSection extends StatelessWidget {
   const SecondSection({super.key});
